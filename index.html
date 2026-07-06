@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2312161c'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='%2363d9c8' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
@@ -257,6 +259,240 @@
       <a class="btn btn-primary" href="mailto:beqa.gorgiladze.2006@gmail.com">Email me</a>
       <a class="btn btn-ghost" href="https://github.com/beka2006" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/beka-gorgiladze/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Beka Gorgiladze</span>
+  <span class="muted">built with HTML / CSS / JS</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beka Gorgiladze — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2312161c'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='%2363d9c8' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- background grid / schematic layer -->
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="prompt-tag">bgorgiladze@kiu:~$</div>
+  <nav class="nav">
+    <a href="#about">about</a>
+    <a href="#education">education</a>
+    <a href="#stack">stack</a>
+    <a href="#coursework">coursework</a>
+    <a href="#certs">certs</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="hero-left">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">session — boot.log</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="line"><span class="prompt">$</span> <span class="cmd" id="typedCmd"></span><span class="cursor" id="typeCursor">▌</span></div>
+          <div class="output" id="typedOutput"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-slot" id="photoSlot">
+        <img src="cvphoto.jpg" alt="Beka Gorgiladze">
+      </div>
+      <h1 class="name">Beka<br>Gorgiladze</h1>
+      <p class="role">Computer Science Student — Systems &amp; Backend</p>
+      <p class="summary">
+        Second-year CS student at Kutaisi International University, building a
+        foundation in computer architecture, operating systems and databases.
+        Comfortable moving between low-level systems (MIPS, memory management)
+        and higher-level backend work (Java, SQL, OCaml).
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#" id="resumeLink" target="_blank" rel="noopener">Download CV ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <h2 class="section-head"><span class="tag">$ cd</span> education</h2>
+    <div class="card edu-card">
+      <div class="edu-top">
+        <div>
+          <h3>Kutaisi International University</h3>
+          <p class="muted">B.Sc. Computer Science</p>
+        </div>
+        <div class="timeframe">2024 — 2028</div>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" style="width:50%"></div>
+      </div>
+      <p class="muted small">Year 2 of 4 in progress</p>
+    </div>
+  </section>
+
+  <!-- COURSEWORK -->
+  <section class="section" id="coursework">
+    <h2 class="section-head"><span class="tag">$ ls</span> coursework/</h2>
+    <div class="course-grid">
+
+      <div class="course-card">
+        <div class="course-head">
+          <span class="course-id">CS·ARCH</span>
+          <h3>Computer Architecture &amp; Lab</h3>
+        </div>
+        <p class="muted">Prof. Wolfgang Jacob Paul</p>
+        <p>Deep understanding of MIPS instruction sets and the hardware–software interface.</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-head">
+          <span class="course-id">CS·OS</span>
+          <h3>Operating Systems</h3>
+        </div>
+        <p class="muted">Prof. Marcus Neuhäuser</p>
+        <p>In-depth work on system programming, process management and concurrency.</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-head">
+          <span class="course-id">CS·DB</span>
+          <h3>Databases</h3>
+        </div>
+        <p class="muted">Prof. Eva Maria Knirsch</p>
+        <p>Practical experience in relational database design and SQL.</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-head">
+          <span class="course-id">CS·ALG</span>
+          <h3>Algorithms &amp; Data Structures</h3>
+        </div>
+        <p class="muted">Prof. George Nadareishvili</p>
+        <p>Comprehensive study of complexity analysis and efficient data organization.</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-head">
+          <span class="course-id">MATH</span>
+          <h3>Linear Algebra &amp; Discrete Math</h3>
+        </div>
+        <p class="muted">Dr. Markus Neuhauser</p>
+        <p>Mathematical foundation for complex, rigorous problem-solving.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <h2 class="section-head"><span class="tag">$ cat</span> stack.json</h2>
+
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h4>Languages</h4>
+        <ul class="chip-list">
+          <li>Java (Core)</li>
+          <li>OCaml</li>
+          <li>SQL / PostgreSQL</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Backend &amp; Systems</h4>
+        <ul class="chip-list">
+          <li>JVM internals</li>
+          <li>Multithreading (basic)</li>
+          <li>Memory management</li>
+          <li>MIPS architecture</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Tools</h4>
+        <ul class="chip-list">
+          <li>Git / GitHub</li>
+          <li>PostgreSQL</li>
+          <li>Verilog</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Working style</h4>
+        <ul class="chip-list">
+          <li>Leadership</li>
+          <li>Technical English (B2)</li>
+          <li>Time management</li>
+          <li>Stakeholder communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section class="section" id="certs">
+    <h2 class="section-head"><span class="tag">$ ls</span> certificates/</h2>
+    <ul class="cert-list">
+      <li>
+        <span class="cert-year">2025</span>
+        <span class="cert-name">General English Course (B1)</span>
+        <span class="cert-org">British Council × KIU</span>
+      </li>
+      <li>
+        <span class="cert-year">2022</span>
+        <span class="cert-name">Digital Citizenship &amp; Basics of Technologies</span>
+        <span class="cert-org">USAID &amp; GeoLab</span>
+      </li>
+      <li>
+        <span class="cert-year">2020</span>
+        <span class="cert-name">Beginner Programming — Web Design Basics (HTML/CSS)</span>
+        <span class="cert-org">Batumi Shota Rustaveli State University</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <h2 class="section-head"><span class="tag">$ mail</span> --send</h2>
+    <p class="muted" style="max-width:46ch;margin-bottom:1.5rem">
+      Looking for a backend / systems-adjacent internship or collaboration on
+      a Java project? This inbox is open.
+    </p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:youremail@example.com">Email me</a>
+      <a class="btn btn-ghost" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </section>
 
