@@ -22,7 +22,7 @@ const command = 'whoami --verbose';
 const outputLines = [
   ['name', 'Beka Gorgiladze'],
   ['role', 'Computer Science Student'],
-  ['focus', 'Systems, Backend, Java, OCaml'],
+  ['focus', 'Systems, Backend, Java, SQL, C#'],
   ['university', 'Kutaisi International University'],
   ['status', 'open to internships']
 ];
